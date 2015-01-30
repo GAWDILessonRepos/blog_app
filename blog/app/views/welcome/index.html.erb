@@ -1,2 +1,10 @@
 <h1>Hello, Rails!</h1>
 <%= link_to 'My Blog', controller: 'articles' %>
+<h2>Categories<h2>
+<ul>
+    <% @categories.each do |category| %>
+      <li><%= link_to "#{category.name}", category_path(category) %>
+      <%= link_to 'Destroy', category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <% end %>
+</ul>
+

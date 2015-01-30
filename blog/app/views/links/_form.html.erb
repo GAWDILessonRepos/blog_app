@@ -1,0 +1,13 @@
+<%= form_for([@article, @article.links.build]) do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :url %><br>
+    <%= f.text_area :url %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
