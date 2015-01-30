@@ -14,6 +14,7 @@ class LinksController < ApplicationController
   end
 
   def edit
+    @article = @article = Article.find(params[:article_id])
     @link = Link.find(params[:id])
   end
 

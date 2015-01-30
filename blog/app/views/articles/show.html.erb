@@ -12,6 +12,7 @@
 <h2> Suggested Reading:</h2>
 <% @article.links.each do |link| %>
   <%= link_to "#{link.title}", link.url %>
+  <%= link_to 'Edit', edit_article_link_path(@article, link) %>
   <%= link_to 'Destroy', [link.article, link], method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 <h2>Add a Link</h2>
@@ -23,5 +24,5 @@
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
 
-<%= link_to 'Edit Article', edit_article_path(@article) %> |
+<%= link_to 'Edit Article', edit_article_path(@article) %>
 <%= link_to 'Back to Articles', articles_path %>
